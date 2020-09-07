@@ -12,7 +12,7 @@ docker build -t shashibanger/iperf:1.0.0 .
 
 ### Test setup
 
-1. Two AWS ec2 instances c5d.large created in the same availability zone.
+1. Two AWS ec2 instances c5d.large created in the same availability zone. These instances have [enahanced networking](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/enhanced-networking-ena.html) enabled.
 2. Run iperf3 server on one instance using following command
 ```
 docker run -it --rm --net host shashibanger/iperf:1.0.0 iperf3 -s
